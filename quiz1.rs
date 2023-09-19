@@ -13,10 +13,16 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
+
+use std::cmp::Ordering;
 
 // Put your function here!
-// fn calculate_price_of_apples {
+fn calculate_price_of_apples(amt: i32) -> i32 {
+    match amt.cmp(&40) {
+        Ordering::Greater => amt,
+        _ => amt * 2,
+    }
+}
 
 // Don't modify this function!
 #[test]
